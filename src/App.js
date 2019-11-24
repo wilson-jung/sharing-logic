@@ -1,24 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ContainerPresenter from './ContainerPresenter';
+import HighOrderComponent from './HighOrderComponent';
+import RenderProps from './RenderProps';
+import Hooks from './Hooks';
+import ContextAPI from './ContextAPI';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ContextAPI />
     </div>
   );
 }
