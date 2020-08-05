@@ -8,7 +8,7 @@ export default Index;
 
 
 /*************************/
-function Presenter1(props) {
+function Presenter1() {
   const { value, onClick } = useButton({ text: 'click me!!hook'});
   return (
   <div>
@@ -16,8 +16,8 @@ function Presenter1(props) {
   </div>
   )
 }
-function Presenter2(props) {
-  const buttonProps = useButton(props);
+function Presenter2() {
+  const buttonProps = useButton();
   return (
   <div>
     <button {...buttonProps}>click me2!</button>
@@ -25,7 +25,7 @@ function Presenter2(props) {
   )
 }
 
-function useButton(props) {
+function useButton() {
   const [value] = React.useState(props.text || '');
   const onClick = React.useCallback(() => {
     console.log('clicked!');
